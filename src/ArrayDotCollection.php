@@ -10,7 +10,7 @@ class ArrayDotCollection implements DotCollectionInterface
         $top = count($parts) - 1;
         $index = 0;
 
-        foreach ($array as $key => $value) {
+        foreach ($collection as $key => $value) {
             // If we have only one path item left and this array key matches
             // it, let's immediately return its value.
             if ($key === $parts[0] && $index === $top) {
