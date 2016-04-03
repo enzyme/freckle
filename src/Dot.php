@@ -2,6 +2,8 @@
 
 namespace Enzyme\Freckle;
 
+use InvalidArgumentException;
+
 class Dot
 {
     public function get($collection, $path)
@@ -11,7 +13,7 @@ class Dot
         if (null === $dotter) {
             $type = gettype($collection);
 
-            throw new Exception(
+            throw new InvalidArgumentException(
                 "Freckle doesn't know how to process the " .
                 "collection of type [{$type}]"
             );
